@@ -49,4 +49,4 @@ Create a unit.tick() filter named "Live" and paste the contents of FMO-Ore_Monit
 * status3Limit: Bottom % limit for showing status 3 text. status2Limit -> status3Limit
 
 # Credits
-Inspired by the script from thespartacus29: https://github.com/belamber/FMO-Ore-Monitor.git
+Inspired by the script from thespartacus29: https://github.com/thespartacus29/DualUniverse-OreMonitor
