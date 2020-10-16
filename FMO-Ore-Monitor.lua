@@ -31,8 +31,8 @@ local status1Color   = "#008000" --export: Color for status text level 1
 local status2Color   = "#FFFF00" --export: Color for status text level 2
 local status3Color   = "#FF4500" --export: Color for status text level 3
 local status4Color   = "#FF0000" --export: Color for status text level 4
-local status1Limit   = 60          --export: Between 100% and this value will show status text 1
-local status2Limit   = 40          --export: Between status 1 limit and this value will show status text 2
+local status1Limit   = 50          --export: Between 100% and this value will show status text 1
+local status2Limit   = 30          --export: Between status 1 limit and this value will show status text 2
 local status3Limit   = 25          --export: Between status 2 limit and this value will show status text 3
 -------------------------------------------------------
 

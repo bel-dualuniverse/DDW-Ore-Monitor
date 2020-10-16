@@ -1,6 +1,7 @@
 Version 0.4:
     10/16/2020
     - Fixed: Updated density of Gold
+    - Update: Updated the status limits to 50, 30, 25
 
 Version 0.3:
     10/7/2020
