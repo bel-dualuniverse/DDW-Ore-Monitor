@@ -1,0 +1,19 @@
+Version 0.4:
+    10/16/2020
+    - Fixed: Updated density of Gold
+
+Version 0.3:
+    10/7/2020
+    - Fixed: Ore tons calculation. Thanks to Exsilium for finding it.
+    - Fixed: Updated density of Garnierite
+    - Feature: Added option to display volume in L
+    - Update: maxOre is now specified in kL instead of L.  This is more consistent with the container info in DU.
+
+Version 0.2:
+9/28/2020
+    - Fixed: Updated densities of Acanthite and Petalite
+
+Version 0.1:
+9/28/2020
+    - Fixed: Updated some densities using actual getItemsMass() values.  Fixes percent calculations.
+    - Feature: Added customizable status text
