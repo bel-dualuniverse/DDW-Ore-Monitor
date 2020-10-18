@@ -5,12 +5,13 @@
 -- Update Lua Parameters with the ore names and your max container volumes
 -- This script should run under a tick filter named "Live"
 -- The "Live" tick filter should be initialized in unit.start()
-version=0.4
+version=0.5
 
 -- Exports --------------------------------------------
 local title = "T1 Ore Status" --export: Title of table
 
-local units = 1 --export: Use 0 for T, 1 for KL or 2 for L
+local units              = 3     --export: Use 0 for T, 1 for KL or 2 for L, 3 for auto kL/L
+local autoUnitsThreshold = 10000 --export: Threshold in L used to switch between kL and L when units mode 3 is used
 
 local ore1Type = "hematite" --export: Ore type in first container
 local ore2Type = "bauxite"  --export: Ore type in second container
@@ -27,10 +28,10 @@ local status1Text    = "Good"      --export: Status text for level 1
 local status2Text    = "Low"       --export: Status text for level 2
 local status3Text    = "Very Low"  --export: Status text for level 3
 local status4Text    = "Critical"  --export: Status text for level 4
-local status1Color   = "#008000" --export: Color for status text level 1
-local status2Color   = "#FFFF00" --export: Color for status text level 2
-local status3Color   = "#FF4500" --export: Color for status text level 3
-local status4Color   = "#FF0000" --export: Color for status text level 4
+local status1Color   = "#008000"   --export: Color for status text level 1
+local status2Color   = "#FFFF00"   --export: Color for status text level 2
+local status3Color   = "#FF4500"   --export: Color for status text level 3
+local status4Color   = "#FF0000"   --export: Color for status text level 4
 local status1Limit   = 50          --export: Between 100% and this value will show status text 1
 local status2Limit   = 30          --export: Between status 1 limit and this value will show status text 2
 local status3Limit   = 25          --export: Between status 2 limit and this value will show status text 3
@@ -111,7 +112,7 @@ function oreRow(ore, density, mass, max, oreUnits)
     if oreUnits == 0 then
         total = round(mass / 1000, 1)
         unitSuffix = "T"
-    elseif oreUnits == 1 then
+    elseif oreUnits == 1 or (oreUnits == 3 and liters >= autoUnitsThreshold) then
         total = round(liters / 1000, 1)
         unitSuffix = "KL"
     else

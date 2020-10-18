@@ -26,7 +26,8 @@ Create a unit.tick() filter named "Live" and paste the contents of FMO-Ore_Monit
 
 ## Lua Parameters
 * title:  Title of the table
-* units:  Table units. 0=T, 1=kL, 2=L
+* units:  Table units. 0=T, 1=kL, 2=L, 3=auto kL/L
+* autoUnitsThreshold: Threshold in L used to switch between kL and L units when units mode 3 is used.
 * ore1Type: Ore type in container ore1
 * ore2Type: Ore type in container ore2
 * ore3Type: Ore type in container ore3

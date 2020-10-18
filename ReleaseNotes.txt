@@ -1,3 +1,7 @@
+Version 0.5:
+    10/18/2020
+    - Feature: Added auto kL/L units.  Units will switch between kL and L based on a configurable threshold.
+    
 Version 0.4:
     10/16/2020
     - Fixed: Updated density of Gold
