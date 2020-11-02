@@ -1,4 +1,4 @@
-# FMO-Ore-Monitor
+# DDW-Ore-Monitor
 Dual Universe Ore Monitor
 
 # Installation
@@ -22,7 +22,7 @@ Create a unit.stop() filter and add the following code:
 screen.clear()
 screen.deactivate()
 ```
-Create a unit.tick() filter named "Live" and paste the contents of FMO-Ore_Monitor.lua
+Create a unit.tick() filter named "Live" and paste the contents of DDW-Ore-Monitor.lua
 
 ## Lua Parameters
 * title:  Title of the table
